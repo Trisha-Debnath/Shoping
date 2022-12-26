@@ -1,17 +1,14 @@
 @extends('backend.master')
 @section('content')
-<div class="div" style="width:200px"><a href="{{('admin-create')}}" class="btn btn-primary">Create</a></div>
+<div class="div"><a href="{{route('admin-create')}}" class="btn btn-info">create</a></div>
 
-<div class="diva" style="width: 200px;"><a href="{{('admin-create')}}" class="btn btn-primary">Update</a></div>
-
-
-<table class="table">
+<table class="table table-dark">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Id</th>
+      <th scope="col">Email</th>
+      <th scope="col">Password</th>
+      
     </tr>
   </thead>
   <tbody>
@@ -35,5 +32,4 @@
     </tr>
   </tbody>
 </table>
-
 @endsection

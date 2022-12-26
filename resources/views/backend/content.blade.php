@@ -1,6 +1,10 @@
 @extends('backend.master')
 @section('content')
-<section class="section dashboard">
+
+
+
+
+    <section class="section dashboard">
       <div class="row">
 
         <!-- Left side columns -->
@@ -634,4 +638,5 @@
       </div>
     </section>
 
+ 
 @endsection

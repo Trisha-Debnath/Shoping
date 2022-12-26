@@ -2,16 +2,29 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Adminmodel;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class SidebarController extends Controller
 {
    public function admin(){
-    return view('backend.page.admin');
+      $mainpage=Adminmodel::all();
+    return view('backend.page.admin',compact('mainpage'));
    }
+
+
    //start admin create controller
    public function admin_create(){
-   return view('backend.page.sql.admin');
+   return view('backend.page.sql.admin_create');
+   }
+   public function admin_createaction(Request $request){
+      Adminmodel::create(['Email' => $request->Email,
+      'Password' => $request->Password
+
+      ]);
+      return Redirect('admin');
    }
 
 

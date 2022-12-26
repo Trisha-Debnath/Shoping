@@ -19,10 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/master',[MainController::class,'master']);
-Route::get('/Home',[MainController::class,'content']);
-Route::get('/admin',[SidebarController::class,'admin']);//admin
+Route::get('/Home',[MainController::class,'content'])->name('content');
+Route::get('/admin',[SidebarController::class,'admin'])->name('adminpage');//admin
 //start admin create
 Route::get('/admin-create',[SidebarController::class,'admin_create'])->name('admin-create');
+Route::post('/admin-createaction',[SidebarController::class,'admin_createaction'])->name('admin-createaction');
 //end admin create
 
 Route::get('/customer',[SidebarController::class,'customer']);

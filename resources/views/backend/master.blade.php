@@ -281,9 +281,11 @@
         </ol>
       </nav>
     </div>
+
+    @yield('content')
   </main>
     
-    @yield('content')
+   
   <!-- End #main -->
 
   <!-- ======= Footer ======= -->

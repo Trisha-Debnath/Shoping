@@ -3,7 +3,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="{{url('content')}}">
+        <a class="nav-link " href="{{route('content')}}">
           <i class="bi bi-grid"></i>
           <span>Home</span>
         </a>
@@ -12,7 +12,7 @@
       <ul class="sidebar-nav" id="sidebar-nav">
 
 <li class="nav-item">
-  <a class="nav-link " href="{{url('admin')}}">
+  <a class="nav-link " href="{{route('adminpage')}}">
     <i class="bi bi-grid"></i>
     <span>Admin</span>
   </a>
